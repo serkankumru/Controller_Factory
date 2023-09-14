@@ -21,8 +21,8 @@ namespace News.ControllerFactory
             }
             if (controllerName == "Home")
             {
-               // IController cnt = new HomeController(_repo);
-               // return cnt;
+                IController cnt = new HomeController(_repo);
+                return cnt;
             }
             return base.CreateController(requestContext, controllerName);
         }
