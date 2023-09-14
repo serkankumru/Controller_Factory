@@ -24,7 +24,10 @@ namespace News
             RouteConfig.RegisterRoutes(RouteTable.Routes);
             BundleConfig.RegisterBundles(BundleTable.Bundles);
 
+            
             ModelBinders.Binders.Add(typeof(NewsT),new NewModelBinder());
+            
+            
             MyControllerFactory myController = new MyControllerFactory();
             ControllerBuilder.Current.SetControllerFactory(myController);
 
